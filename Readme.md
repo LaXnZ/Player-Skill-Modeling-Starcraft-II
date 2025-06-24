@@ -14,17 +14,7 @@ The research specifically concentrates on **Real-Time Strategy (RTS)** games, wi
 
 The data used in this research comes from the [StarCraft II Replay Analysis Dataset](https://www.kaggle.com/datasets/sfu-summit/starcraft-ii-replay-analysis), which includes various player performance metrics such as **APM (Actions Per Minute)**, **Hotkey usage**, and **game outcomes**. This dataset is used to train the machine learning models that predict player skill.
 
-### 2. **Data Preprocessing**
-
-Before training the models, the data went through several preprocessing steps:
-- **Handling missing values**: Missing values were filled using the column's mean.
-- **Feature Engineering**: A new feature called **Hotkey Efficiency** was created, which is the ratio of `SelectByHotkeys` to `AssignToHotkeys`.
-- **Label Encoding**: The **LeagueIndex** was encoded into numerical values to serve as the target variable for classification.
-- **Scaling & Normalization**: Features were scaled using **StandardScaler**, and vector normalization was applied to each row to prepare the dataset for PCA (Principal Component Analysis).
-
-The final preprocessed dataset was then used for model training.
-
-### 3. **Model Comparison**
+### 2. **Model Comparison**
 
 Several machine learning models were trained and compared to predict player skill. These models included:
 - **Random Forest Classifier**
@@ -36,11 +26,21 @@ The models were evaluated based on accuracy, precision, recall, and F1-score, wi
 
 #### [Model Comparison](https://github.com/LaXnZ/enhancing-sbmm-in-competitive-games/blob/model-comparison/Model_Comparison_with_Original_Dataset.ipynb)
 
+### 3. **Data Preprocessing**
+
+Before training the models, the data went through several preprocessing steps:
+- **Handling missing values**: Missing values were filled using the column's mean.
+- **Feature Engineering**: A new feature called **Hotkey Efficiency** was created, which is the ratio of `SelectByHotkeys` to `AssignToHotkeys`.
+- **Label Encoding**: The **LeagueIndex** was encoded into numerical values to serve as the target variable for classification.
+- **Scaling & Normalization**: Features were scaled using **StandardScaler**, and vector normalization was applied to each row to prepare the dataset for PCA (Principal Component Analysis).
+
+The final preprocessed dataset was then used for model training.
+
 ### 4. **Model Training**
 
 After preprocessing the data, I trained a **Logistic Regression** model, which is used to predict player skill levels (used for matchmaking).
 
-#### [Model Training](https://github.com/LaXnZ/enhancing-sbmm-in-competitive-games/blob/model-training/Preprocessing_Dataset_%2B_Training_a_Model_Using_LogisticRegression.ipynb)
+#### [Data Preprocessing + Model Training](https://github.com/LaXnZ/enhancing-sbmm-in-competitive-games/blob/model-training/Preprocessing_Dataset_%2B_Training_a_Model_Using_LogisticRegression.ipynb)
 
 ### 5. **Model Evaluation**
 
